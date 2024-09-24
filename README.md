@@ -48,6 +48,8 @@ userid  | Integer| Y| 用户id
 competitionid | Integer |Y| 竞赛id
 content | String | Y |评论内容
 
+返回数据：
+Result.success("评论成功")
 
 
 # checkcomment
@@ -58,6 +60,12 @@ commentid  | Integer| Y| 评论的id
 approveid | Integer |Y| 审核的结果，1表示审核通过，2表示审核不通过
 adminid | Integer | Y |审核人的id
 
+返回数据：
+返回数据类型|内容
+----|-----|
+成功json|Result.success("审核成功")
+失败json|Result.error("审核id错误")，当传入审核结果不正确时
+
 # getcomments
 管理员获取评论信息
 参数名称| 参数类型 |参数是否必需|参数描述
@@ -65,6 +73,13 @@ adminid | Integer | Y |审核人的id
 pageNum | Integer| Y| 总页数
 pageSize | Integer |Y| 每页的数据数量
 checkid| Integer | N |筛选信息(checkid中，不传返回全部，传1表示审核通过，传2表示审核未通过，传0表示未审核)
+
+返回数据：
+返回数据类型|内容
+----|-----|
+PageBean<comment>|评论信息
+
+
 
 # deletecomment
 管理员删除评论
