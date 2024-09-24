@@ -33,6 +33,13 @@ public class comment {
 ``` 
 评论在插入的时候默认审核id均为0，表示还未审核
 
+**项目结构**：
+
+
+![image](https://github.com/user-attachments/assets/63021e77-e32d-4ad0-91d1-dad37f999f25)
+
+
+
 # addComment
 #添加评论(测试的时候需要)
 参数名称| 参数类型 |参数是否必需|参数描述
